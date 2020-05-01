@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <SCRIPT>
+            function pasuser(form) {
+                if (form.pass.value=="letmein") {              
+                location="main.html" 
+                } 
+                else {
+                alert("Invalid Password")
+                }
+            }          
+    </SCRIPT>
+    <div id="wrapper">
+        <header>
+            <h1>Welcome to this page</h1>
+        </header>
+        <main>
+            <p>This is a password protected page to put the things on, so you can only get in if you know the password</p>
+                 <form name="login">
+                    <input name="pass" type="password" onkeydown = "if (event.keyCode == 13){document.getElementById('buttonID').click();event.returnValue=false;event.cancel=true;}"> <br>
+                    <input type="button" id="buttonID" value="Click to Enter"  onClick="pasuser(this.form)">
+                </form>
+        </main>
+    </div>
+    <script>
+      
+    </script>
+</body>
+</html>
